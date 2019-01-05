@@ -5,8 +5,8 @@ const { HarmonyHub } = require("harmonyhub-api");
 const hub = new HarmonyHub(process.env.IP_ADDRESS, process.env.REMOTE_ID);
 
 const Command = new Map([
-  ["VolumeDown", { command: "VolumeDown", times: 3 }],
   ["VolumeUp", { command: "VolumeUp", times: 3 }],
+  ["VolumeDown", { command: "VolumeDown", times: 3 }],
   ["Mute", { command: "Mute" }]
 ]);
 const sendCommand = key => {
