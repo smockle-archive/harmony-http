@@ -33,7 +33,9 @@ sudo chown -R `whoami` /var/lib/harmony-http
 git clone https://github.com/smockle/harmony-http /var/lib/harmony-http
 ```
 
-2. Create a `.env` file in `/var/lib/harmony-http` with variables described in [Configuration](#Configuration):
+2. Install dependencies: `npm --prefix /var/lib/harmony-http install /var/lib/harmony-http`
+
+3. Create a `.env` file in `/var/lib/harmony-http` with variables described in [Configuration](#Configuration):
 
 ```Bash
 tee /var/lib/harmony-http/.env << EOF
@@ -44,9 +46,9 @@ PORT=
 EOF
 ```
 
-3. Create a system user: `sudo useradd --system harmony-http`
+4. Create a system user: `sudo useradd --system harmony-http`
 
-4. Create a `systemd` service:
+5. Create a `systemd` service:
 
 ```Bash
 sudo tee /etc/systemd/system/harmony-http.service << EOF
@@ -68,7 +70,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-5. Enable the `harmony-http` system user to access files in `/var/lib/harmony-http`: `sudo chown -R harmony-http:harmony-http /var/lib/harmony-http`
+6. Enable the `harmony-http` system user to access files in `/var/lib/harmony-http`: `sudo chown -R harmony-http:harmony-http /var/lib/harmony-http`
 
 # Creating Shortcuts
 
