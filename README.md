@@ -72,6 +72,14 @@ EOF
 
 6. Enable the `harmony-http` system user to access files in `/var/lib/harmony-http`: `sudo chown -R harmony-http:harmony-http /var/lib/harmony-http`
 
+7. Enable the `systemd` service:
+
+```Bash
+sudo systemctl daemon-reload
+sudo systemctl enable harmony-http
+sudo systemctl start harmony-http
+```
+
 # Creating Shortcuts
 
 1. Add a “URL” step:
