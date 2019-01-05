@@ -60,6 +60,7 @@ After=syslog.target network-online.target
 [Service]
 Type=simple
 User=harmony-http
+WorkingDirectory=/var/lib/harmony-http
 ExecStart=/var/lib/harmony-http/index.js
 Restart=on-failure
 RestartSec=10
