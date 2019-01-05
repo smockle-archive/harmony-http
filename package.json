@@ -1,0 +1,16 @@
+{
+  "name": "harmony-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Clay Miller <clay@smockle.com> (https://www.smockle.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv-safe": "^6.1.0",
+    "express": "^4.16.4",
+    "harmonyhub-api": "^1.0.2"
+  }
+}
